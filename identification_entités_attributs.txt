@@ -1,0 +1,34 @@
+1. Identification des entités, attributs et identifiants
+
+CHAMPIONNAT
+Attributs : code_championnat, nom, date_debut, date_fin
+Identifiant : code_championnat
+
+MANIFESTATION
+Attributs : num_manifestation, nom
+Identifiant : num_manifestation
+
+EPREUVE
+Attributs : num_epreuve, date, heure_depart
+Identifiant : num_epreuve
+
+TYPE_EPREUVE
+Attributs : code_type, libelle, distance
+Identifiant : code_type
+
+COUREUR
+Attributs : num_coureur, nom, prenom, date_naissance, sexe
+Identifiant : num_coureur
+
+CLUB
+Attributs : code_club, nom, ville
+Identifiant : code_club
+
+
+2. Associations + attributs
+
+est_constitue
+est_compose
+caracteriser
+s_inscrire (num_dossard, certificat_medical, date_inscription, taille_tshirt, statut, temps_previsionnel, temps_realise)
+adherer (annee, montant_cotisation, num_licence)
