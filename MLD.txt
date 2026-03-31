@@ -1,19 +1,23 @@
-CHAMPIONNAT(code_championnat, nom, date_debut, date_fin)
-Clé primaire : code_championnat
-MANIFESTATION(num_manifestation, nom, code_championnat#)
-Clé primaire : num_manifestation
+CHAMPIONNAT(code_championnat PK, nom, date_debut, date_fin)
+clé primaire : code_championnat
 
-EPREUVE(num_epreuve, date, heure_depart, num_manifestation#, code_type#)
-Clé primaire : num_epreuve
+MANIFESTATION(num_manifestation PK, nom, code_championnat#)
+clé primaire : num_manifestation
 
-TYPE_EPREUVE(code_type, libelle, distance)
-Clé primaire : code_type
-COUREUR(num_coureur, nom, prenom, date_naissance, sexe)
-Clé primaire : num_coureur
-CLUB(code_club, nom, ville)
-Clé primaire : code_club
-INSCRIPTION(num_coureur#, num_epreuve#, num_dossard, certificat_medical, date_inscription, taille_tshirt, statut, temps_previsionnel, temps_reel)
-Clé primaire : (num_coureur, num_epreuve)
+TYPE_EPREUVE(code_type PK, libelle, distance)
+clé primaire : code_type
 
-ADHERER(num_coureur#, code_club#, annee, montant_cotisation, num_licence)
-Clé primaire : (num_coureur, code_club, annee)
+EPREUVE(num_epreuve PK, date, heure_depart, num_manifestation#, code_type#)
+clé primaire : num_epreuve
+
+COUREUR(num_coureur PK, nom, prenom, date_naissance, sexe)
+clé primaire :num_coureur
+
+CLUB(code_club PK, nom, ville)
+clé primaire : code_club
+
+ADHERER(code_club PK #, num_coureur PK #, annee PK, num_license, montant_cotisation)
+clé primaire : code_club, num_coureur
+
+S_INSCRIRE(num_coureur PK #, num_epreuve PK #, num_dossard, taille_tshirt, temps_realise, status, temps_previsionnel, date_inscription, certificat_medical)
+clé primaire : num_coureur, num_epreuve

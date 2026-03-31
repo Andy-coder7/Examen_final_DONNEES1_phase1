@@ -1,0 +1,14 @@
+Sur l'association "est_constitue" , on a mis 1,1 du côté manifestation car une manifestation ne constitue qu'un championnat, 
+une manifestation = un championnat
+Exemple : championnat 1998, juin = une manifestation et  juillet = une autre manifestation.
+
+
+Sur l'association "est_compose" , on a mis 1,1 du côté epreuve car une épreuve ne compose qu'une seule manifestation.
+Exemple : une manifestation = 5 épreuves, ces 5 épreuves ne corresondent plus aux 5 épreuves aux manifestations suivantes.
+
+
+Sur l'association "caracteriser" , on a mis 1,1 du côté épreuve car une instance 
+d'épreuve est caractérisé par un type d'epreuve seulement et non pas deux ou plus .
+Exemple : une épreuve = 5km , non pas une épreuve = 5km + basket.
+Et on a mis 0,n du côté type_epreuve car un type d'épreuve peut ne pas être
+ séléctionner et un type d'épreuve peut aussi être pris par plusieurs épreuves.

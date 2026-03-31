@@ -31,4 +31,4 @@ est_constitue
 est_compose
 caracteriser
 s_inscrire (num_dossard, certificat_medical, date_inscription, taille_tshirt, statut, temps_previsionnel, temps_realise)
-adherer (annee, montant_cotisation, num_licence)
+adherer(annee, montant_cotisation, num_licence)
